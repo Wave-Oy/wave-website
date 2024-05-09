@@ -1,0 +1,61 @@
+/* Fonts */
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+
+:root {
+    overflow-x: hidden;
+    font-size: 62.5%;
+    --nav-height: 50px;
+
+    /* Font size */
+    --label-small: 1rem;
+    --label-medium: 1.2rem;
+    --label-large: 1.4rem;
+    --paragraph-small: 1.4rem;
+    --paragraph-medium: 1.6rem;
+    --paragraph-large: 1.8rem;
+    --header-small: 1.4rem;
+    --header-medium: 1.6rem;
+    --header-large: 1.8rem;
+
+    /* Colors */
+    --base: #F3F6FE;
+
+    --background-primary: #FFFFFF;
+    --background-secondary: #0C0F12;
+    --background-tertiary: #393A3D;
+    --background-accent: #4A8FF7;
+    --background-disabled: #8E9095;
+
+    --foreground-on-primary: #0C0F12;
+    --foreground-on-secondary: #FFFFFF;
+    --foreground-on-tertiary: #FFFFFF;
+    --foreground-on-accent: #FFFFFF;
+    --foreground-on-disabled: #393A3D;
+    --foreground-tertiary: #393A3D;
+    --foreground-accent: #3C75CA;
+    --foreground-disabled: #8E9095;
+
+    --negative: #EE4D4D;
+    --warning: #F2CB00;
+    --positive: #19A71B;
+}
+html {
+    font-family: "Poppins", sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background-image: url("/background_image.png");
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+.container {
+    margin: 0 200px 0 200px;
+}
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
