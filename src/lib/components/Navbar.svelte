@@ -1,19 +1,19 @@
 <script lang="ts">
-
+    import { base } from '$app/paths';
 </script>
 
 <nav>
     <div class="container">
-        <a href="/" class="logo">wave</a>
+        <a href="{base}/" class="logo">wave</a>
         <ul>
             <li>
-                <a href="/">About</a>
+                <a href="{base}/">About</a>
             </li>
             <li>
-                <a href="/">Contact</a>
+                <a href="{base}/">Contact</a>
             </li>
             <li>
-                <a href="/">For salons</a>
+                <a href="{base}/">For salons</a>
             </li>
         </ul>
     </div>
