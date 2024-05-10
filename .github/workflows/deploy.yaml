@@ -28,7 +28,7 @@ jobs:
 
       - name: build
         env:
-          BASE_PATH: 'waveapp.fi'
+          BASE_PATH: '/waveapp.fi'
         run: |
           npm run build
 
