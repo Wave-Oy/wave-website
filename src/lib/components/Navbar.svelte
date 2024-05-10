@@ -4,7 +4,7 @@
 
 <nav>
     <div class="container">
-        <a href="" class="logo">wave</a>
+        <a href="/" class="logo">wave</a>
         <ul>
             <li>
                 <a href="/">About</a>
@@ -32,8 +32,10 @@
         line-height: var(--nav-height);
         float: left;
         text-decoration: none;
+        font-weight: 500;
         color: var(--foreground-accent);
-        font-size: var(--label-large);
+        font-size: 2.6rem;
+        letter-spacing: -0.05em;
     }
     ul {
         list-style-type: none;
@@ -45,7 +47,8 @@
         text-align: center;
         float: left;
         display: block;
-        margin-left: 20px;
+        margin-left: 4rem;
+        font-weight: 500;
     }
     li a {
         line-height: var(--nav-height);

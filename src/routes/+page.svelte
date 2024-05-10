@@ -1,6 +1,7 @@
 <script>
     import Button from "$lib/components/Button.svelte";
     let isChecked = false;
+    let text = "Button";
 
     const handleClick = () => {
         console.log("Button clicked");
@@ -11,8 +12,8 @@
 <div class="home">
     <div class="container">
         <header>
-            <button class="button-medium button-accent">Hello</button>
-            <Button handler={handleClick} text="Button" color="accent" size="medium" disabled={isChecked}/>
+            <Button handler={handleClick} text={text} shape="rectangle" size="medium" layout="label" color="accent" disabled={isChecked}/>
+            <input type="text" bind:value={text}>
             <input type="checkbox" bind:checked={isChecked} />
         </header>
         <section>

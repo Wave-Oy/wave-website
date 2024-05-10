@@ -1,50 +1,57 @@
 <script lang="ts">
     export let handler: () => void;
-    export let color: string = "primary";
+    export let shape: string = "rectangle";
     export let size: string = "medium";
-    export let text: string = "Placeholder";
+    export let layout: string = "label";
+    export let color: string = "primary";
+    export let text: string = "Label";
     export let disabled: boolean = false;
 
-    $: className = `color-${color} size-${size} ${disabled ? "disabled" : ""}`;
+    const className = `shape-${shape} size-${size} layoyt-${layout} color-${color}`;
 
     $: disabled = disabled;
+    $: text = text;
 </script>
 
 <button class={className} on:click={() => handler()} disabled={disabled}>
-    {text}
+    {#if layout == "label"}
+        {text}
+    {:else if layout == "icon"}
+        icon
+    {/if}
 </button>
 
 <style lang="scss">
 button {
     border: none;
-    width: 200px;
-    height: 28px;
-    border-radius: 5px;
-    font-size: 1px;
+    border-radius: 10px;
+    padding: 0;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
         filter: brightness(1.1);
     }
 
-    &:active{
+    &:active {
         filter: brightness(0.9);
     }
 
-    &.color-accent{
+    &:disabled {
+        background-color: var(--background-disabled) !important;
+        color: var(--foreground-on-disabled) !important;
+        cursor: not-allowed;
+    }
+
+    &.color-accent {
         background-color: var(--background-accent);
         color: var(--foreground-on-accent);
     }
 
-    &.size-medium{
+    &.size-medium {
+        width: 250px;
+        height: 48px;
         font-size: var(--label-medium);
+        font-weight: 600;
     }
-
-    &.disabled{
-        background-color: var(--background-disabled);
-        color: var(--foreground-on-disabled);
-        cursor: not-allowed;
-    }
-
 }
 </style>

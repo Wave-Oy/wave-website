@@ -4,12 +4,13 @@
 :root {
     overflow-x: hidden;
     font-size: 62.5%;
-    --nav-height: 50px;
+    --nav-height: 6rem;
+    --max-width: 1200px;
 
     /* Font size */
-    --label-small: 1rem;
-    --label-medium: 1.2rem;
-    --label-large: 1.4rem;
+    --label-small: 1.4rem;
+    --label-medium: 1.6rem;
+    --label-large: 1.8rem;
     --paragraph-small: 1.4rem;
     --paragraph-medium: 1.6rem;
     --paragraph-large: 1.8rem;
@@ -52,7 +53,8 @@ body {
     background-size: cover;
 }
 .container {
-    margin: 0 200px 0 200px;
+    margin: auto;
+    max-width: var(--max-width);
 }
 html {
     margin: 0;
