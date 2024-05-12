@@ -114,7 +114,7 @@
     .img-design-preview {
         width: 421px;
         height: 614px;
-        background-image: url('/design-preview.png');
+        background-image: url('./design-preview.png');
         background-size: cover;
         background-position: center;
         border: 0px;
@@ -123,7 +123,7 @@
     .img-take-selfie {
         width: 253px;
         height: 448px;
-        background-image: url('/take-selfie.png');
+        background-image: url('./take-selfie.png');
         background-size: cover;
         background-position: center;
     }
@@ -131,7 +131,7 @@
     .img-select-style {
         width: 253px;
         height: 448px;
-        background-image: url('/select-style.png');
+        background-image: url('./select-style.png');
         background-size: cover;
         background-position: center;
     }
@@ -139,7 +139,7 @@
     .img-book-time {
         width: 253px;
         height: 448px;
-        background-image: url('/book-time.png');
+        background-image: url('./book-time.png');
         background-size: cover;
         background-position: center;
     }
