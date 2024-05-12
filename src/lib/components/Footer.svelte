@@ -7,7 +7,7 @@
         <a href="{base}/" class="logo">wave</a>
     </div>
     <div class="container">
-        <a href="{base}/#form-section">Sign up to be the first to know!</a> <!-- TODO: need to create section with id = "form-section"-->
+        <a href="{base}/#form-section">Sign up to be the first to know!</a> <!-- Now navigates to the "Hook section"-->
     </div>
     <div class="container">
         <ul>

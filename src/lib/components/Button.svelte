@@ -47,10 +47,31 @@ button {
         color: var(--foreground-on-accent);
     }
 
+    &.size-small {
+        width: 200px;
+        height: 40px;
+        font-size: var(--label-small);
+        font-weight: 600;
+    }
+
     &.size-medium {
         width: 250px;
         height: 48px;
         font-size: var(--label-medium);
+        font-weight: 600;
+    }
+
+    &.size-large {
+        width: 300px;
+        height: 56px;
+        font-size: var(--label-large);
+        font-weight: 600;
+    }
+
+    &.size-xlarge {
+        width: 350px;
+        height: 64px;
+        font-size: var(--label-xlarge);
         font-weight: 600;
     }
 }
