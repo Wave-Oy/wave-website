@@ -19,26 +19,76 @@
     --header-large: 1.8rem;
 
     /* Colors */
-    --base: #F3F6FE;
+    --blue-100: #F3F6FE;
+    --blue-200: #E4EBFD;
+    --blue-300: #C4D5FB;
+    --blue-400: #9FBCFA;
+    --blue-500: #6EA0F8;
+    --blue-600: #4A8FF7;
+    --blue-700: #3C75CA;
+    --blue-800: #315FA5;
+    --blue-900: #234274;
+
+    --gray-100: #F5F5F5;
+    --gray-200: #E8E8E9;
+    --gray-300: #CFCFD1;
+    --gray-400: #B1B2B6;
+    --gray-500: #8E9095;
+    --gray-600: #72747B;
+    --gray-700: #63646A;
+    --gray-800: #515257;
+    --gray-900: #393A3D;
+
+    --red-100: #FFF3F3;
+    --red-200: #FFE4E4;
+    --red-300: #FEC6C6;
+    --red-400: #FEA2A2;
+    --red-500: #FD7373;
+    --red-600: #EE4D4D;
+    --red-700: #CE4343;
+    --red-800: #A93737;
+    --red-900: #772727;
+
+    --green-100: #F2F8F2;
+    --green-200: #E1F0E1;
+    --green-300: #BFE0BF;
+    --green-400: #95CE95;
+    --green-500: #59BB5A;
+    --green-600: #19A71B;
+    --green-700: #169018;
+    --green-800: #127613;
+    --green-900: #0D530E;
+
+    --yellow-100: #FFF7E4;
+    --yellow-200: #FFEFC6;
+    --yellow-300: #FFE38C;
+    --yellow-400: #FFDA51;
+    --yellow-500: #F2CB00;
+    --yellow-600: #D5B300;
+    --yellow-700: #B49700;
+    --yellow-800: #8C7500;
+    --yellow-900: #514400;
+
+    --base: var(--blue-100);
 
     --background-primary: #FFFFFF;
     --background-secondary: #0C0F12;
-    --background-tertiary: #393A3D;
-    --background-accent: #4A8FF7;
-    --background-disabled: #8E9095;
+    --background-tertiary: var(--gray-900);
+    --background-accent: var(--blue-600);
+    --background-disabled: var(--gray-500);
 
     --foreground-on-primary: #0C0F12;
     --foreground-on-secondary: #FFFFFF;
     --foreground-on-tertiary: #FFFFFF;
     --foreground-on-accent: #FFFFFF;
-    --foreground-on-disabled: #393A3D;
-    --foreground-tertiary: #393A3D;
-    --foreground-accent: #3C75CA;
-    --foreground-disabled: #8E9095;
+    --foreground-on-disabled: var(--gray-900);
+    --foreground-tertiary: var(--gray-900);
+    --foreground-accent: var(--blue-700);
+    --foreground-disabled: var(--gray-500);
 
-    --negative: #EE4D4D;
-    --warning: #F2CB00;
-    --positive: #19A71B;
+    --negative: var(--red-600);
+    --warning: var(--yellow-500);
+    --positive: var(--green-600);
 }
 html {
     font-family: "Poppins", sans-serif;
