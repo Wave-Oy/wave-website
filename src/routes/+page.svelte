@@ -46,12 +46,10 @@
                 </div>
                 <div class="col margin">
                     <h1 class="gradient-l-r">Select a style</h1>
-                    <!-- Image -->
                     <img class="bottom-fade" src={`${base}/select-style.png`}  alt="Select a style" />
                 </div>
                 <div class="col margin">
                     <h1 class="gradient-l-r">Book a time</h1>
-                    <!-- Image -->
                     <img class="bottom-fade" src={`${base}/book-time.png`}  alt="Book a time" />
                 </div>
         </section>
