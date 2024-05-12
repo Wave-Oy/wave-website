@@ -1,5 +1,6 @@
 <script>
     // For icons check: https://svelte-icons.vercel.app/
+    import { base } from '$app/paths';
     import FaChevronDown from 'svelte-icons/fa/FaChevronDown.svelte'
     import Button from "$lib/components/Button.svelte";
     let isChecked = false;
@@ -28,7 +29,7 @@
                     <Button handler={handleClick} text="Sign up for a Beta" shape="rectangle" size="xlarge" layout="label" color="accent" disabled={false}/>
                 </div>
                 <div class="col">
-                    <img src="/design-preview.png" alt="Design Preview" />
+                    <img src="{base}/design-preview.png" alt="Design Preview" />
                 </div>
             </div>
 
@@ -41,15 +42,15 @@
             <div class="row">
                 <div class="col margin">
                     <h1 class="gradient-l-r">Take a selfie</h1>
-                    <img class="bottom-fade" src="/take-selfie.png" alt="Take a selfie" />
+                    <img class="bottom-fade" src="{base}/take-selfie.png" alt="Take a selfie" />
                 </div>
                 <div class="col margin">
                     <h1 class="gradient-l-r">Select a style</h1>
-                    <img class="bottom-fade" src="/select-style.png" alt="Select a style" />
+                    <img class="bottom-fade" src="{base}/select-style.png" alt="Select a style" />
                 </div>
                 <div class="col margin">
                     <h1 class="gradient-l-r">Book a time</h1>
-                    <img class="bottom-fade" src="/book-time.png" alt="Book a time" />
+                    <img class="bottom-fade" src="{base}/book-time.png" alt="Book a time" />
                 </div>
         </section>
     </div>
