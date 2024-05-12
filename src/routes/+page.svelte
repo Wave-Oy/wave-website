@@ -29,7 +29,7 @@
                     <Button handler={handleClick} text="Sign up for a Beta" shape="rectangle" size="xlarge" layout="label" color="accent" disabled={false}/>
                 </div>
                 <div class="col">
-                    <!-- <img src="{base}/design-preview.png" alt="Design Preview" /> -->
+                    <!-- Image -->
                 </div>
             </div>
 
@@ -42,15 +42,15 @@
             <div class="row">
                 <div class="col margin">
                     <h1 class="gradient-l-r">Take a selfie</h1>
-                    <!-- <img class="bottom-fade" src="{base}/take-selfie.png" alt="Take a selfie" /> -->
+                    <!-- Image -->
                 </div>
                 <div class="col margin">
                     <h1 class="gradient-l-r">Select a style</h1>
-                    <!-- <img class="bottom-fade" src="{base}/select-style.png" alt="Select a style" /> -->
+                    <!-- Image -->
                 </div>
                 <div class="col margin">
                     <h1 class="gradient-l-r">Book a time</h1>
-                    <!-- <img class="bottom-fade" src="{base}/book-time.png" alt="Book a time" /> -->
+                    <!-- Image -->
                 </div>
         </section>
     </div>
