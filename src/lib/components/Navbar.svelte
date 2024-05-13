@@ -7,13 +7,13 @@
         <a href="{base}/" class="logo">wave</a>
         <ul>
             <li>
-                <a href="{base}/">About</a>
+                <a href="{base}/about">About</a>
             </li>
             <li>
-                <a href="{base}/">Contact</a>
+                <a href="{base}/contact">Contact</a>
             </li>
             <li>
-                <a href="{base}/">For salons</a>
+                <a href="{base}/for-salons">For salons</a>
             </li>
         </ul>
     </div>
