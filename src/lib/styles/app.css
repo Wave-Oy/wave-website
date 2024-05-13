@@ -15,9 +15,10 @@
     --paragraph-small: 1.4rem;
     --paragraph-medium: 1.6rem;
     --paragraph-large: 1.8rem;
-    --header-small: 1.4rem;
-    --header-medium: 1.6rem;
-    --header-large: 1.8rem;
+    --paragraph-xlarge: 2.6rem;
+    --header-small: 2rem;
+    --header-medium: 3.6rem;
+    --header-large: 5rem;
 
     /* Colors */
     --blue-100: #F3F6FE;

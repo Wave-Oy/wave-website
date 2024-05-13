@@ -5,20 +5,9 @@
 <footer>
     <div class="container">
         <a href="{base}/" class="logo">wave</a>
-    </div>
-    <div class="container">
-        <a href="{base}/#form-section">Sign up to be the first to know!</a> <!-- Now navigates to the "Hook section"-->
-    </div>
-    <div class="container">
         <ul>
             <li>
-                <a href="{base}/">About</a>
-            </li>
-            <li>
-                <a href="{base}/">Contact</a>
-            </li>
-            <li>
-                <a href="{base}/">For salons</a>
+                <a href="">Sign up to be first to know</a>
             </li>
         </ul>
     </div>
@@ -26,20 +15,18 @@
 
 <style lang="scss">
     footer {
-        margin: auto;
-        padding: 10px;
-        height: auto;
-        width: 100vw;
-        background-color: var(--background-accent);
-        justify-content: center;
-        display: flex;
-        flex-direction: row;
         position: sticky;
         top: 100%;
+        height: 100px;
+        margin: 0;
+        padding: 0;
+        background: none;
+        background-color: var(--background-accent);
+        backdrop-filter: blur(100px);
     }
 
     .logo {
-        line-height: var(--nav-height);
+        line-height: 100px;
         float: left;
         text-decoration: none;
         font-weight: 500;
@@ -47,24 +34,18 @@
         font-size: 2.6rem;
         letter-spacing: -0.05em;
     }
+
     ul {
-        list-style-type: none;
         float: right;
-        margin: 0;
-        padding: 0;
     }
+
     li {
-        text-align: center;
-        float: left;
-        display: block;
-        margin-left: 4rem;
-        font-weight: 500;
     }
-    a {
-        line-height: var(--nav-height);
+
+    li a {
         text-decoration: none;
         display: block;
-        color: var(--foreground-on-accent);
+        color: var(--foreground-accent);
         font-size: var(--label-medium);
     }
 </style>

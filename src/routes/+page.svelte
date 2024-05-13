@@ -14,42 +14,31 @@
 
 <div class="home">
     <div class="container">
-        <!-- <header>
-            <Button handler={handleClick} text={text} shape="rectangle" size="medium" layout="label" color="accent" disabled={isChecked}/>
-            <input type="text" bind:value={text}>
-            <input type="checkbox" bind:checked={isChecked} />
-        </header> -->
-
-        <section class="main-content">
-            <!-- Hook section -->
-            <div id="form-section" class="row">
-                <div class="col">
-                    <h1 class="section-title gradient-l-r">Choosing a hairstyle was hard...</h1>
-                    <h1 class="section-title gradient-l-r margin-bottom">Not anymore</h1>
-                    <Button handler={handleClick} text="Sign up for a Beta" shape="rectangle" size="xlarge" layout="label" color="accent" disabled={false}/>
+        <header>
+            <div class="row">
+                <div>
+                    <h1 class="gradient-l-r">Choosing a hairstyle<br>has never been easier</h1>
+                    <Button handler={handleClick} text="Test sign up" shape="rectangle" size="large" layout="label" color="accent" disabled={false}/>
                 </div>
-                <div class="col">
+                <div>
                     <img src={`${base}/design-preview.png`} alt="Design Preview" />
                 </div>
             </div>
-
-            <div class="arrow-down">
-                <FaChevronDown />
-            </div>
-
+        </header>
+        <section class="main-content">
             <!-- Three picture section -->
-            <h1 class="section-title gradient-r-l">Simplify</h1>
+            <h2 class="gradient-r-l">Simply</h2>
             <div class="row">
                 <div class="col margin">
-                    <h1 class="gradient-l-r">Take a selfie</h1>
+                    <p class="gradient-l-r">Take a selfie</p>
                     <img class="bottom-fade" src={`${base}/take-selfie.png`} alt="Take a selfie" />
                 </div>
                 <div class="col margin">
-                    <h1 class="gradient-l-r">Select a style</h1>
+                    <p class="gradient-l-r">Select a style</p>
                     <img class="bottom-fade" src={`${base}/select-style.png`} alt="Select a style" />
                 </div>
                 <div class="col margin">
-                    <h1 class="gradient-l-r">Book a time</h1>
+                    <p class="gradient-l-r">Book a time</p>
                     <img class="bottom-fade" src={`${base}/book-time.png`} alt="Book a time" />
                 </div>
         </section>
@@ -58,10 +47,29 @@
 
 <style lang="scss">
     .main-content {
+        padding-top: 50px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+    }
+    .main-content h2 {
+        font-size: var(--header-large);
+        font-weight: 600;
+        margin: 0 0 25px 0;
+        padding: 0;
+    }
+    .main-content p {
+        font-size: var(--paragraph-xlarge);
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+    }
+    header h1 {
+        font-size: var(--header-large);
+        font-weight: 700;
+        margin: 0 0 50px 0;
+        padding: 0;
     }
 
     .row {
