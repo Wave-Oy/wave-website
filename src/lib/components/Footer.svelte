@@ -4,12 +4,16 @@
 
 <footer>
     <div class="container">
-        <a href="{base}/" class="logo">wave</a>
-        <ul>
-            <li>
-                <a href="">Sign up to be first to know</a>
-            </li>
-        </ul>
+        <div class="content">
+            <a href="{base}/" class="logo">wave</a>
+            <div class="links">
+                <a href="https://www.linkedin.com/company/waveapplication/">LinkedIn</a>
+                <a href={`${base}/`}>Contact us</a>
+            </div>
+        </div>
+        <div class="contact">
+            <a href='mailto:contact@waveapp.fi'>contact@waveapp.fi</a>
+        </div>
     </div>
 </footer>
 
@@ -19,15 +23,19 @@
         top: 100%;
         height: 100px;
         margin: 0;
-        padding: 0;
+        padding: 20px 0 20px 0;
         background: none;
-        background-color: var(--background-accent);
+        background-color: var(--background-tertiary);
         backdrop-filter: blur(100px);
     }
 
-    .logo {
-        line-height: 100px;
+    .content {
         float: left;
+    }
+
+    .logo {
+        padding: 0;
+        margin: 0;
         text-decoration: none;
         font-weight: 500;
         color: var(--foreground-on-accent);
@@ -35,17 +43,33 @@
         letter-spacing: -0.05em;
     }
 
-    ul {
-        float: right;
+    .links {
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
     }
 
-    li {
-    }
-
-    li a {
+    .links a {
         text-decoration: none;
-        display: block;
-        color: var(--foreground-accent);
+        color: var(--foreground-on-accent);
+        font-size: var(--label-medium);
+    }
+
+    .contact {
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+        height: 100px;
+        float: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .contact a {
+        text-decoration: none;
+        color: var(--foreground-on-accent);
         font-size: var(--label-medium);
     }
 </style>
