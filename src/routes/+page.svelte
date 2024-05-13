@@ -42,16 +42,15 @@
             <div class="row">
                 <div class="col margin">
                     <h1 class="gradient-l-r">Take a selfie</h1>
-                    <div class="img-take-selfie bottom-fade" />
-                    <img src={`${base}/take-selfie.png`} alt="Take a selfie" />
+                    <img class="bottom-fade" src={`${base}/take-selfie.png`} alt="Take a selfie" />
                 </div>
                 <div class="col margin">
                     <h1 class="gradient-l-r">Select a style</h1>
-                    <img src={`${base}/select-style.png`} alt="Select a style" />
+                    <img class="bottom-fade" src={`${base}/select-style.png`} alt="Select a style" />
                 </div>
                 <div class="col margin">
                     <h1 class="gradient-l-r">Book a time</h1>
-                    <img src={`${base}/book-time.png`} alt="Book a time" />
+                    <img class="bottom-fade" src={`${base}/book-time.png`} alt="Book a time" />
                 </div>
         </section>
     </div>
