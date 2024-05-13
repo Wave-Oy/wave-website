@@ -3,6 +3,7 @@
     import { base } from '$app/paths';
     import FaChevronDown from 'svelte-icons/fa/FaChevronDown.svelte'
     import Button from "$lib/components/Button.svelte";
+    import Page from './about/+page.svelte';
     let isChecked = false;
     let text = "Button";
 
@@ -12,13 +13,14 @@
     }
 </script>
 
-<div class="home">
+<div class="home page">
     <div class="container">
         <header>
             <div class="row">
                 <div>
-                    <h1 class="gradient-l-r">Choosing a hairstyle<br>has never been easier</h1>
-                    <Button handler={handleClick} text="Test sign up" shape="rectangle" size="large" layout="label" color="accent" disabled={false}/>
+                    <h1 class="gradient-r-l">Choosing a hairstyle<br>has never been<br>easier</h1>
+                    <p>Wave is transforming the way you choose and book your hairstyle with just a selfie.</p>
+                    <Button handler={handleClick} text="Sign up for testing" shape="rectangle" size="large" layout="label" color="accent" disabled={false}/>
                 </div>
                 <div>
                     <img src={`${base}/design-preview.png`} alt="Design Preview" />
@@ -26,19 +28,21 @@
             </div>
         </header>
         <section class="main-content">
-            <!-- Three picture section -->
-            <h2 class="gradient-r-l">Simply</h2>
+            <h2 class="gradient-r-l">An interactive reservation system</h2>
+            <p>Wave offers a reservation system equipped with a personal hairstyle assistant, to help people choose haircuts based on real data and communicate it to salons.</p>
+        </section>
+        <section class="parallax-content">
             <div class="row">
                 <div class="col margin">
-                    <p class="gradient-l-r">Take a selfie</p>
+                    <h3>Take a selfie</h3>
                     <img class="bottom-fade" src={`${base}/take-selfie.png`} alt="Take a selfie" />
                 </div>
                 <div class="col margin">
-                    <p class="gradient-l-r">Select a style</p>
+                    <h3>Choose a style</h3>
                     <img class="bottom-fade" src={`${base}/select-style.png`} alt="Select a style" />
                 </div>
                 <div class="col margin">
-                    <p class="gradient-l-r">Book a time</p>
+                    <h3>Book a time</h3>
                     <img class="bottom-fade" src={`${base}/book-time.png`} alt="Book a time" />
                 </div>
         </section>
@@ -46,8 +50,26 @@
 </div>
 
 <style lang="scss">
+    header h1 {
+        font-size: var(--header-xlarge);
+        line-height: 7rem;
+        font-weight: 600;
+        margin: 0 0 25px 0;
+        padding: 0;
+    }
+
+    header p {
+        font-size: var(--paragraph-medium);
+        color: var(--foreground-accent);
+        font-weight: 500;
+        margin: 0 0 50px 0;
+        max-width: 500px;
+        padding: 0;
+    }
+
     .main-content {
-        padding-top: 50px;
+        padding-top: 100px;
+        padding-bottom: 100px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -60,15 +82,23 @@
         padding: 0;
     }
     .main-content p {
-        font-size: var(--paragraph-xlarge);
+        font-size: var(--paragraph-medium);
+        color: var(--foreground-accent);
+        text-align: center;
+        max-width: 800px;
         font-weight: 600;
         margin: 0;
         padding: 0;
     }
-    header h1 {
-        font-size: var(--header-large);
-        font-weight: 700;
-        margin: 0 0 50px 0;
+
+    .parallax-content {
+
+    }
+    .parallax-content h3 {
+        font-size: var(--header-small);
+        color: var(--foreground-accent);
+        font-weight: 600;
+        margin: 0 0 25px 0;
         padding: 0;
     }
 
