@@ -29,7 +29,7 @@
                     <Button handler={handleClick} text="Sign up for a Beta" shape="rectangle" size="xlarge" layout="label" color="accent" disabled={false}/>
                 </div>
                 <div class="col">
-                    <img class="img-design-preview" />
+                    <img src={`${base}/design-preview.png`} alt="Design Preview" />
                 </div>
             </div>
 
@@ -43,14 +43,15 @@
                 <div class="col margin">
                     <h1 class="gradient-l-r">Take a selfie</h1>
                     <div class="img-take-selfie bottom-fade" />
+                    <img src={`${base}/take-selfie.png`} alt="Take a selfie" />
                 </div>
                 <div class="col margin">
                     <h1 class="gradient-l-r">Select a style</h1>
-                    <div class="img-select-style bottom-fade" />
+                    <img src={`${base}/select-style.png`} alt="Select a style" />
                 </div>
                 <div class="col margin">
                     <h1 class="gradient-l-r">Book a time</h1>
-                    <div class="img-book-time bottom-fade" />
+                    <img src={`${base}/book-time.png`} alt="Book a time" />
                 </div>
         </section>
     </div>
@@ -109,39 +110,6 @@
         background: linear-gradient(to right, var(--blue-700), #4585E5, var(--blue-800));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-    }
-
-    .img-design-preview {
-        width: 421px;
-        height: 614px;
-        background-image: url('./design-preview.png');
-        background-size: cover;
-        background-position: center;
-        border: 0px;
-    }
-
-    .img-take-selfie {
-        width: 253px;
-        height: 448px;
-        background-image: url('./take-selfie.png');
-        background-size: cover;
-        background-position: center;
-    }
-
-    .img-select-style {
-        width: 253px;
-        height: 448px;
-        background-image: url('./select-style.png');
-        background-size: cover;
-        background-position: center;
-    }
-
-    .img-book-time {
-        width: 253px;
-        height: 448px;
-        background-image: url('./book-time.png');
-        background-size: cover;
-        background-position: center;
     }
 
     .bottom-fade {
