@@ -1,10 +1,31 @@
 <script lang="ts">
     import { base } from '$app/paths';
+    import { navigating } from '$app/stores';
+
+    let pagesChecked: boolean = false;
+
+    function resetNavbar () {
+        pagesChecked = false;
+    }
+
+    $: if ($navigating) {
+        resetNavbar();
+    }
 </script>
 
 <nav>
     <div class="container">
         <a href="{base}/" class="logo">wave</a>
+
+        <!-- Burger menu -->
+        <input type="checkbox" id="pages-input" bind:checked={pagesChecked}>
+        <label for="pages-input" id="pages-button">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </label>
+
+        <!-- Pages -->
         <ul>
             <li>
                 <a href="{base}/about">About</a>
@@ -21,10 +42,12 @@
 
 <style lang="scss">
     nav {
+        position: fixed;
+        z-index: 1;
+        width: 100%;
         height: var(--nav-height);
         margin: 0;
         padding: 0;
-        background: none;
         background-color: var(--background-white);
         backdrop-filter: blur(100px);
     }
@@ -38,6 +61,7 @@
         letter-spacing: -0.05em;
     }
     ul {
+        display: block;
         list-style-type: none;
         float: right;
         margin: 0;
@@ -56,5 +80,74 @@
         display: block;
         color: var(--foreground-accent);
         font-size: var(--label-medium);
+    }
+    #pages-button {
+        display: none;
+        height: var(--nav-height);
+        width: 30px;
+        padding: 1.5em 0;
+        float: right;
+        cursor: pointer;
+    }
+    #pages-input {
+        display: none;
+    }
+    .bar1, .bar2, .bar3 {
+        width: 100%;
+        height: 3px;
+        background-color: var(--foreground-accent);
+        margin: 5px 0;
+        transition: 0.1s;
+        border-radius: 2px;
+    }
+    /* Responsive mobile view */
+    @media (max-width: 700px) {
+        ul {
+            visibility: hidden;
+            padding-top: var(--nav-height);
+            height: 100vh;
+            opacity: 0;
+            position: fixed;
+            left: 0;
+            width: 100%;
+            background-color: var(--background-primary);
+        }
+        li {
+            float: none;
+            text-align: left;
+            margin: 0;
+            padding: 5px 0 5px var(--container-padding);
+        }
+        li a {
+            width: 100%;
+            line-height: 50px;
+            font-size: var(--label-large);
+        }
+        #pages-button {
+            display: block;
+            margin-left: 10px;
+        }
+        /* Logic for mobile menu */
+        #pages-input:checked ~ ul {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity .2s, visibility .2s;
+        }
+        #pages-input:checked ~ #pages-button {
+            right: var(--container-padding);
+            position: fixed;
+            z-index: 2;
+        }
+
+        /* Rotate bars */
+        #pages-input:checked ~ #pages-button > .bar1 {
+            transform: translate(0, 8px) rotate(-45deg);
+        }
+        #pages-input:checked ~ #pages-button > .bar2 {
+            opacity: 0;
+        }
+        #pages-input:checked ~ #pages-button > .bar3 {
+            transform: translate(0, -8px) rotate(45deg);
+        }
     }
 </style>

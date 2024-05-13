@@ -6,19 +6,21 @@
     font-size: 62.5%;
     --nav-height: 6rem;
     --max-width: 1200px;
+    --container-padding: 20px;
 
     /* Font size */
     --label-small: 1.4rem;
     --label-medium: 1.6rem;
     --label-large: 1.8rem;
     --label-xlarge: 2rem;
-    --paragraph-small: 1.4rem;
-    --paragraph-medium: 1.6rem;
-    --paragraph-large: 1.8rem;
-    --paragraph-xlarge: 2.6rem;
-    --header-small: 2rem;
+    --paragraph-small: 1.6rem;
+    --paragraph-medium: 1.8rem;
+    --paragraph-large: 2rem;
+    --paragraph-xlarge: 2.8rem;
+    --header-small: 2.4rem;
     --header-medium: 3.6rem;
     --header-large: 5rem;
+    --header-xlarge: 6rem;
 
     /* Colors */
     --blue-100: #F3F6FE;
@@ -94,6 +96,7 @@
 }
 html {
     font-family: "Poppins", sans-serif;
+    scroll-behavior: auto;
 }
 body {
     padding: 0;
@@ -105,8 +108,14 @@ body {
     background-size: cover;
 }
 .container {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
     max-width: var(--max-width);
+}
+.page {
+    padding-top: var(--nav-height);
 }
 html {
     margin: 0;
