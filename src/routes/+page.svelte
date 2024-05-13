@@ -42,15 +42,15 @@
             <div class="row">
                 <div class="col margin">
                     <h1 class="gradient-l-r">Take a selfie</h1>
-                    <img class="bottom-fade" src={`${base}/take-selfie.png`} alt="Take a selfie" />
+                    <img src={`${base}/take-selfie.png`} alt="Take a selfie" />
                 </div>
                 <div class="col margin">
                     <h1 class="gradient-l-r">Select a style</h1>
-                    <img class="bottom-fade" src={`${base}/select-style.png`} alt="Select a style" />
+                    <img src={`${base}/select-style.png`} alt="Select a style" />
                 </div>
                 <div class="col margin">
                     <h1 class="gradient-l-r">Book a time</h1>
-                    <img class="bottom-fade" src={`${base}/book-time.png`} alt="Book a time" />
+                    <img src={`${base}/book-time.png`} alt="Book a time" />
                 </div>
         </section>
     </div>
@@ -111,6 +111,7 @@
         -webkit-text-fill-color: transparent;
     }
 
+    // This breaks the production build
     .bottom-fade {
         -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0));
         -webkit-mask-size: 100% 90%;
