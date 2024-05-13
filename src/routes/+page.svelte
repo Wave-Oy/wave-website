@@ -42,7 +42,6 @@
             <div class="row">
                 <div class="col margin">
                     <h1 class="gradient-l-r">Take a selfie</h1>
-                    <div class="img-take-selfie bottom-fade" />
                     <img src={`${base}/take-selfie.png`} alt="Take a selfie" />
                 </div>
                 <div class="col margin">
@@ -112,6 +111,7 @@
         -webkit-text-fill-color: transparent;
     }
 
+    // This breaks the production build
     .bottom-fade {
         -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0));
         -webkit-mask-size: 100% 90%;
