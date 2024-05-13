@@ -1,61 +1,16 @@
-<script lang="ts">
+<script>
     // For icons check: https://svelte-icons.vercel.app/
     import { base } from '$app/paths';
+    import FaChevronDown from 'svelte-icons/fa/FaChevronDown.svelte'
     import Button from "$lib/components/Button.svelte";
     import Page from './about/+page.svelte';
-    import axios from 'axios';
+    let isChecked = false;
+    let text = "Button";
 
     const handleClick = () => {
         console.log("Button clicked");
-        sendEmail()
+        console.log("isChecked", isChecked);
     }
-
-    const sendEmail = async () => {
-        const payload = {
-            Messages: [
-            {
-                From: {
-                Email: 'wavebot@waveapp.fi',
-                Name: 'Wave Bot'
-                },
-                To: [
-                {
-                    Email: 'georgy@waveapp.fi',
-                    Name: 'Georgy'
-                }
-                ],
-                Subject: 'Your email flight plan!',
-                TextPart: 'Dear passenger 1, welcome to Mailjet! May the delivery force be with you!',
-                HTMLPart: '<h3>Dear passenger 1, welcome to <a href="https://www.mailjet.com/">Mailjet</a>!</h3><br />May the delivery force be with you!'
-            }
-            ]
-        };
-
-        try {
-            const response = await axios.post(
-            'https://api.mailjet.com/v3.1/send',
-            payload,
-            {
-                auth: {
-                    username: process.env.MAILJET_API_KEY,
-                    password: process.env.MAILJET_SECRET_KEY
-                },
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
-                    'Access-Control-Allow-Origin': '*',
-                    'Access-Control-Allow-Headers': '*',
-                }
-            }
-            );
-
-            console.log('Email sent successfully:', response.data);
-        } catch (error) {
-            console.error('Error sending email:', error);
-        }
-    };
-
-
 </script>
 
 <div class="home page">
