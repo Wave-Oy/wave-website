@@ -28,7 +28,9 @@ jobs:
 
       - name: build
         env:
-          BASE_PATH: '/waveapp.fi'
+          BASE_PATH: '/waveapp.fi',
+          MAILJET_API_KEY: ${{ secrets.MAILJET_API_KEY }},
+          MAILJET_SECRET_KEY: ${{ secrets.MAILJET_SECRET_KEY }}
         run: |
           npm run build
 
