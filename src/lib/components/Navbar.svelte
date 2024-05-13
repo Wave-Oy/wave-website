@@ -10,10 +10,10 @@
                 <a href="{base}/about">About</a>
             </li>
             <li>
-                <a href="{base}/contact">Contact</a>
+                <a href="{base}/">Contact</a>
             </li>
             <li>
-                <a href="{base}/for-salons">For salons</a>
+                <a href="{base}/">For salons</a>
             </li>
         </ul>
     </div>
