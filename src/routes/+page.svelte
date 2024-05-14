@@ -1,9 +1,7 @@
 <script lang="ts">
     // For icons check: https://svelte-icons.vercel.app/
     import { base } from '$app/paths';
-    import FaChevronDown from 'svelte-icons/fa/FaChevronDown.svelte'
     import Button from "$lib/components/Button.svelte";
-    import Page from './about/+page.svelte';
 
     let showForm = false;
 
@@ -169,15 +167,6 @@
         font-weight: 500;
         margin: 0;
         padding: 0;
-
-        &.section-title {
-            font-size: 4.8rem;
-            margin-top: 2rem;
-        }
-
-        &.margin-bottom {
-            margin-bottom: 2rem;
-        }
     }
 
     .gradient-l-r {
