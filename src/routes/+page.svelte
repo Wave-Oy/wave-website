@@ -1,15 +1,38 @@
-<script>
+<script lang="ts">
     // For icons check: https://svelte-icons.vercel.app/
     import { base } from '$app/paths';
     import FaChevronDown from 'svelte-icons/fa/FaChevronDown.svelte'
     import Button from "$lib/components/Button.svelte";
     import Page from './about/+page.svelte';
-    let isChecked = false;
-    let text = "Button";
+
+    let showForm = false;
+
+    let name: string;
+    let email: string;
+    let city: string;
+    let antibot: string;
 
     const handleClick = () => {
-        console.log("Button clicked");
-        console.log("isChecked", isChecked);
+        showForm = !showForm;
+    }
+
+    const submitForm = async () => {
+        if (antibot) {
+            return;
+        }
+        const google_form_url = `https://docs.google.com/forms/d/e/1FAIpQLSdeTWpcZgsTbNXSqczGqfwS6zqyYCdgI375_J6z6Rmt1YxPBw/formResponse?&submit=Submit?usp=pp_url&entry.111887972=${name}&entry.1362910400=${email}&entry.533110689=${city}`
+        const res = await fetch(google_form_url, {
+            method: 'GET',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+        })
+        
+        if (res.status != 200) {
+            console.error()
+        }
+
     }
 </script>
 
@@ -27,25 +50,49 @@
                 </div>
             </div>
         </header>
+
+        <section id="form-section" class="form-section {showForm ? 'visible' : ''}">
+            <h1 class="gradient-l-r">Sign up for testing</h1>
+            <form>
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required bind:value={name}>
+                    </div>
+                    <div class="form-col">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your email" required bind:value={email}>
+                    </div>
+                    <div class="form-col">
+                        <label for="city">City of Residence</label>
+                        <input type="text" id="city" name="city" placeholder="Your city" required bind:value={city}>
+                    </div>
+                    <!-- Protection from bots -->
+                    <input style="visibility: hidden; position:fixed;" bind:value={antibot}>
+                </div>
+                <Button handler={submitForm} text="Sign up" shape="rectangle" size="large" layout="label" color="accent" disabled={false}/>
+            </form>
+        </section>
+
         <section class="main-content">
             <h2 class="gradient-r-l">An interactive reservation system</h2>
             <p>Wave offers a reservation system equipped with a personal hairstyle assistant, to help people choose haircuts based on real data and communicate it to salons.</p>
         </section>
-        <section class="parallax-content">
-            <div class="row">
-                <div class="col margin">
-                    <h3>Take a selfie</h3>
-                    <img class="bottom-fade" src={`${base}/take-selfie.png`} alt="Take a selfie" />
-                </div>
-                <div class="col margin">
-                    <h3>Choose a style</h3>
-                    <img class="bottom-fade" src={`${base}/select-style.png`} alt="Select a style" />
-                </div>
-                <div class="col margin">
-                    <h3>Book a time</h3>
-                    <img class="bottom-fade" src={`${base}/book-time.png`} alt="Book a time" />
-                </div>
-        </section>
+
+        <div class="row">
+            <div class="col margin gradient-l-r">
+                <h1>Take a selfie</h1>
+                <img class="bottom-fade" src={`${base}/take-selfie.png`} alt="Take a selfie" />
+            </div>
+            <div class="col margin gradient-l-r">
+                <h1>Choose a style</h1>
+                <img class="bottom-fade" src={`${base}/select-style.png`} alt="Select a style" />
+            </div>
+            <div class="col margin gradient-l-r">
+                <h1>Book a time</h1>
+                <img class="bottom-fade" src={`${base}/book-time.png`} alt="Book a time" />
+            </div>
+        </div>
     </div>
 </div>
 
@@ -91,9 +138,6 @@
         padding: 0;
     }
 
-    .parallax-content {
-
-    }
     .parallax-content h3 {
         font-size: var(--header-small);
         color: var(--foreground-accent);
@@ -165,5 +209,68 @@
         color: rgba(0,0,0,0);
 
         color: var(--blue-700);
+    }
+
+    .form-section {
+        background: var(--blue-100);
+        box-shadow: #F3F6FE 0px 0px 1px 0px;
+        padding: 0px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: solid var(--blue-300);
+        border-width: 2px 0;
+        box-shadow: inset 0px 5px 10px -5px rgba(0, 0, 0, 0.1), inset 0px -5px 10px -5px rgba(0, 0, 0, 0.1);
+        visibility: hidden;
+        overflow: hidden;
+        height: 0rem;
+        transition: height 0.5s, padding 0.5s, visibility 0.5s;
+
+        &.visible {
+            visibility: visible;
+            height: 15rem;
+            padding: 100px 0 100px 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 800px;
+            gap: 2rem;
+            margin-top: 2rem;
+
+            .form-row {
+                display: flex;
+                flex-direction: row;
+                gap: 3rem;
+
+                .form-col {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: left;
+
+                    label {
+                        font-size: var(--paragraph-medium);
+                        color: var(--foreground-accent);
+                        font-weight: 600;
+                        padding: 0;
+                    }
+
+                    input {
+                        padding: 1rem;
+                        font-size: var(--paragraph-medium);
+                        color: var(--foreground-accent);
+                        font-weight: 600;
+                        border: solid var(--blue-200);
+                        border-width: 1px;
+                        border-radius: 0.5rem;
+                        background-color: var(--blue-200);
+                    }
+                }
+            }
+        }
     }
 </style>
