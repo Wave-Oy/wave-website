@@ -70,7 +70,7 @@
                     <!-- Protection from bots -->
                     <input style="visibility: hidden; position:fixed;" bind:value={antibot}>
                 </div>
-                <Button handler={submitForm} text="Sign up" shape="rectangle" size="large" layout="label" color="accent" disabled={false}/>
+                <Button handler={submitForm} text="Sign up" shape="rectangle" size="medium" layout="label" color="accent" disabled={false}/>
             </form>
         </section>
 
@@ -253,7 +253,7 @@
                     justify-content: left;
 
                     label {
-                        font-size: var(--paragraph-medium);
+                        font-size: var(--label-medium);
                         color: var(--foreground-accent);
                         font-weight: 600;
                         padding: 0;
@@ -261,7 +261,7 @@
 
                     input {
                         padding: 1rem;
-                        font-size: var(--paragraph-medium);
+                        font-size: var(--label-medium);
                         color: var(--foreground-accent);
                         font-weight: 600;
                         border: solid var(--blue-200);
