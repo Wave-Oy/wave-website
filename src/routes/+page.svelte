@@ -46,7 +46,7 @@
                     <Button handler={handleClick} text="Sign up for testing" shape="rectangle" size="large" layout="label" color="accent" disabled={false}/>
                 </div>
                 <div>
-                    <img src={`${base}/design-preview.png`} alt="Design Preview" />
+                    <img src={`https://raw.githubusercontent.com/Wave-Oy/wave-website/main/static/design-preview.png`} alt="Design Preview" />
                 </div>
             </div>
         </header>
@@ -82,15 +82,15 @@
         <div class="row">
             <div class="col margin gradient-l-r">
                 <h1>Take a selfie</h1>
-                <img class="bottom-fade" src={`${base}/take-selfie.png`} alt="Take a selfie" />
+                <img class="bottom-fade" src={`https://raw.githubusercontent.com/Wave-Oy/wave-website/main/static/take-selfie.png`} alt="Take a selfie" />
             </div>
             <div class="col margin gradient-l-r">
                 <h1>Choose a style</h1>
-                <img class="bottom-fade" src={`${base}/select-style.png`} alt="Select a style" />
+                <img class="bottom-fade" src={`https://raw.githubusercontent.com/Wave-Oy/wave-website/main/static/select-style.png`} alt="Select a style" />
             </div>
             <div class="col margin gradient-l-r">
                 <h1>Book a time</h1>
-                <img class="bottom-fade" src={`${base}/book-time.png`} alt="Book a time" />
+                <img class="bottom-fade" src={`https://raw.githubusercontent.com/Wave-Oy/wave-website/main/static/book-time.png`} alt="Book a time" />
             </div>
         </div>
     </div>
