@@ -4,6 +4,7 @@
     import FaChevronDown from 'svelte-icons/fa/FaChevronDown.svelte'
     import Button from "$lib/components/Button.svelte";
     import Page from './about/+page.svelte';
+    import { Parallax, ParallaxLayer, StickyLayer } from 'svelte-parallax'
 
     let showForm = false;
 
@@ -34,6 +35,7 @@
         }
 
     }
+
 </script>
 
 <div class="home page">
@@ -79,20 +81,28 @@
             <p>Wave offers a reservation system equipped with a personal hairstyle assistant, to help people choose haircuts based on real data and communicate it to salons.</p>
         </section>
 
-        <div class="row">
-            <div class="col margin gradient-l-r">
-                <h1>Take a selfie</h1>
-                <img class="bottom-fade" src={`${base}/take-selfie.png`} alt="Take a selfie" />
-            </div>
-            <div class="col margin gradient-l-r">
-                <h1>Choose a style</h1>
-                <img class="bottom-fade" src={`${base}/select-style.png`} alt="Select a style" />
-            </div>
-            <div class="col margin gradient-l-r">
+        <Parallax sections={3}>
+            <ParallaxLayer rate={0} offset={0} span={1} style="background-color: orange;" />
+            
+            <StickyLayer offset={{top: 0.2, bottom: 1}} let:progress>
+                <div class="col margin gradient-l-r" style="opacity: {1-progress};" >
+                    <h1 >Take a selfie</h1>
+                    <img class="bottom-fade" src={`${base}/take-selfie.png`} alt="Take a selfie" />
+                </div>
+            </StickyLayer>
+            <StickyLayer offset={{top: 1.2, bottom: 2}} let:progress>
+                <div class="col margin gradient-l-r" style="opacity: {1-progress};">
+                    <h1>Choose a style</h1>
+                    <img class="bottom-fade" src={`${base}/select-style.png`} alt="Select a style" />
+                </div>
+            </StickyLayer>
+            <StickyLayer offset={{top: 2.2, bottom: 3}} let:progress>
+            <div class="col margin gradient-l-r" style="opacity: {1-progress};">
                 <h1>Book a time</h1>
                 <img class="bottom-fade" src={`${base}/book-time.png`} alt="Book a time" />
             </div>
-        </div>
+            </StickyLayer>
+        </Parallax>
     </div>
 </div>
 
