@@ -19,13 +19,13 @@
                 <div class="col">
                     <h2 class="gradient-l-r">Our story</h2>
                     <p>
-                        “Do you know what hairstyle to get? I just go to Google to scroll through thousands of pictures of hairstyles only to get frustrated and anxious!” 
+                        “Do you know which hairstyle to get? I just go to Google to scroll through thousands of pictures of hairstyles only to get frustrated and anxious!” 
                         <br>
                         <br>
                         I recall these were the exact words I said to Simo when I first had the idea of wave. We both realised on that call that before every haircut ever, we have had difficulties in selecting a good looking haircut. Essentially wave was born from a mutual need to make choosing hairstyles easier! 
                         <br>
                         <br>
-                        Fast forward to today, we are a passionate team of 5 individuals, sharing the same common vision, which has guided us from the beginning. Our journey from a simple conversation to winning IdeaRace, South Karelias biggest pitching competition's student category, is a remarkable one, but just the beginning!
+                        Fast forward to today, we are a passionate team of 5 individuals, sharing the same common vision, which has been guiding us since the beginning. Our journey from a simple conversation to winning IdeaRace, South Karelias biggest pitching competition's student category, is a remarkable one, but just the beginning!
                         <br>
                         <br>
                         Now, we're ready for the next stage of our journey. With a clear vision and a passionate team, we are revolutionizing the hairstyling-industry one bold idea at a time! 
