@@ -1,16 +1,28 @@
 <script lang="ts">
     import { base } from '$app/paths';
-    import { navigating } from '$app/stores';
+    import {page, navigating} from '$app/stores';
 
-    let pagesChecked: boolean = false;
+    let pagesChecked = false;
+    let currentRoute;
 
     function resetNavbar () {
         pagesChecked = false;
     }
 
+    function getPage() {
+        if ($navigating) {
+            currentRoute = $navigating.to.url.pathname.split('/')[1].toLowerCase();
+        } else {
+            currentRoute = $page.url.pathname.split('/')[1].toLowerCase();
+        }
+    }
+
     $: if ($navigating) {
         resetNavbar();
+        getPage();
     }
+
+    getPage();
 </script>
 
 <nav>
@@ -100,12 +112,12 @@
         transition: 0.1s;
         border-radius: 2px;
     }
-    /* Responsive mobile view */
-    @media (max-width: 700px) {
+    /* Responsive view */
+    @media (max-width: 1000px) {
         ul {
             visibility: hidden;
             padding-top: var(--nav-height);
-            height: 100vh;
+            height: 200vh;
             opacity: 0;
             position: fixed;
             left: 0;
@@ -117,6 +129,7 @@
             text-align: left;
             margin: 0;
             padding: 5px 0 5px var(--container-padding);
+            border-bottom: 1px solid var(--foreground-accent);
         }
         li a {
             width: 100%;
