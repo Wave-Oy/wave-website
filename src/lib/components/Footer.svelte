@@ -8,7 +8,6 @@
             <a href="{base}/" class="logo">wave</a>
             <div class="links">
                 <a href="https://www.linkedin.com/company/waveapplication/">LinkedIn</a>
-                <a href={`${base}/`}>Contact us</a>
             </div>
         </div>
         <div class="contact">
@@ -45,7 +44,7 @@
 
     .links {
         padding: 0 0 0 0;
-        margin: 0 0 0 0;
+        margin: 10px 0 0 0;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -54,7 +53,7 @@
     .links a {
         text-decoration: none;
         color: var(--foreground-on-accent);
-        font-size: var(--label-medium);
+        font-size: var(--label-small);
     }
 
     .contact {
@@ -70,6 +69,6 @@
     .contact a {
         text-decoration: none;
         color: var(--foreground-on-accent);
-        font-size: var(--label-medium);
+        font-size: var(--label-small);
     }
 </style>

@@ -3,7 +3,7 @@
     import {page, navigating} from '$app/stores';
 
     let pagesChecked = false;
-    let currentRoute;
+    let currentRoute: string = '/';
 
     function resetNavbar () {
         pagesChecked = false;
@@ -40,13 +40,10 @@
         <!-- Pages -->
         <ul>
             <li>
-                <a href="{base}/about">About</a>
+                <a href="{base}/about" class:active-route={currentRoute=="about"}>About</a>
             </li>
             <li>
-                <a href="{base}/">Contact</a>
-            </li>
-            <li>
-                <a href="{base}/">For salons</a>
+                <a href="{base}/" class:active-route={currentRoute=="contact"}>Contact</a>
             </li>
         </ul>
     </div>
@@ -91,7 +88,11 @@
         text-decoration: none;
         display: block;
         color: var(--foreground-accent);
-        font-size: var(--label-medium);
+        font-size: var(--label-small);
+        font-weight: 500;
+    }
+    .active-route {
+        font-weight: 600;
     }
     #pages-button {
         display: none;
@@ -128,15 +129,16 @@
             float: none;
             text-align: left;
             margin: 0;
-            padding: 5px 0 5px var(--container-padding);
+            padding: 5px var(--container-padding) 5px var(--container-padding);
             border-bottom: 1px solid var(--foreground-accent);
         }
         li a {
             width: 100%;
             line-height: 50px;
-            font-size: var(--label-large);
+            font-size: var(--label-medium);
         }
         #pages-button {
+            position: static;
             display: block;
             margin-left: 10px;
         }
@@ -147,8 +149,7 @@
             transition: opacity .2s, visibility .2s;
         }
         #pages-input:checked ~ #pages-button {
-            right: var(--container-padding);
-            position: fixed;
+            position: relative;
             z-index: 2;
         }
 

@@ -42,7 +42,7 @@
         <header>
             <div class="row">
                 <div>
-                    <h1 class="gradient-r-l">Choosing a hairstyle<br>has never been<br>easier</h1>
+                    <h1 class="gradient-r-l">Getting a haircut<br>has never been<br>easier</h1>
                     <p>Wave is transforming the way you choose and book your hairstyle with just a selfie.</p>
                     <Button handler={handleClick} text="Sign up for testing" shape="rectangle" size="medium" layout="label" color="accent" disabled={false}/>
                 </div>
@@ -85,44 +85,53 @@
             <p>Wave offers a reservation system equipped with a personal hairstyle assistant, to help people choose haircuts based on real data and communicate it to salons.</p>
         </section>
 
-        <div class="row">
-            <div class="col margin gradient-l-r">
-                <h1>Take a selfie</h1>
-                <img class="bottom-fade" src={`${base}/take-selfie.png`} alt="Take a selfie" />
+        <section class="parallax-content">
+            <div class="parallax-item">
+                <h3>Take a selfie</h3>
+                <img src={`${base}/take-selfie.png`} alt="Take a selfie" />
             </div>
-            <div class="col margin gradient-l-r">
-                <h1>Choose a style</h1>
-                <img class="bottom-fade" src={`${base}/select-style.png`} alt="Select a style" />
+            <div class="parallax-item">
+                <h3>Choose a style</h3>
+                <img src={`${base}/select-style.png`} alt="Select a style" />
             </div>
-            <div class="col margin gradient-l-r">
-                <h1>Book a time</h1>
-                <img class="bottom-fade" src={`${base}/book-time.png`} alt="Book a time" />
+            <div class="parallax-item">
+                <h3>Book a time</h3>
+                <img src={`${base}/book-time.png`} alt="Book a time" />
             </div>
-        </div>
+        </section>
     </div>
 </div>
 
 <style lang="scss">
+    header {
+            padding: 80px 0 50px 0;
+            transition: padding 0.3s;
+    }
     header h1 {
         font-size: var(--header-xlarge);
-        min-width: 65rem;
+        min-width: 55rem;
         line-height: 7rem;
         font-weight: 600;
         margin: 0 0 25px 0;
         padding: 0;
+        min-width: 61rem;
     }
 
     header p {
         font-size: var(--paragraph-medium);
         color: var(--foreground-accent);
         font-weight: 500;
-        margin: 0 0 50px 0;
+        margin: 0 0 25px 0;
         max-width: 500px;
         padding: 0;
     }
 
     header img {
         overflow: hidden;
+        width: auto;
+        padding: 0;
+        height: 500px;
+        margin-right: -100px;
     }
 
     .main-content {
@@ -148,14 +157,50 @@
         margin: 0;
         padding: 0;
     }
-
-
-    .parallax-content h3 {
-        font-size: var(--header-small);
+   
+    /* Make parallax later */
+    .parallax-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0 100px 0;
+    }
+    .parallax-item {
+    }
+    .parallax-item h3 {
+        font-size: var(--header-medium);
         color: var(--foreground-accent);
         font-weight: 600;
         margin: 0 0 25px 0;
         padding: 0;
+        text-align: center;
+    }
+    .parallax-item img {
+        width: 250px;
+        height: auto;
+        padding: 0 50px 0 50px;
+    }
+    @media (max-width: 1000px) {
+        .parallax-item img {
+            width: 200px;
+            padding: 0 25px 0 25px;
+        }
+    }
+    @media (max-width: 800px) {
+        .parallax-content {
+            flex-direction: column;
+        }
+        .parallax-item {
+            margin: 0 0 100px 0;
+        }
+        .parallax-item h3 {
+            margin: 0 0 10px 0;
+        }
+        .parallax-item img {
+            width: 70vw;
+            padding: 0;
+        }
     }
 
     .row {
@@ -289,13 +334,27 @@
     }
 
     @media (max-width: 1000px) {
+        .form-section {
+            &.visible {
+                visibility: visible;
+                height: 30rem;
+                padding: 100px 10px 100px 10px;
+            }
+            form {
+                .form-row {
+                    flex-direction: column;
+                }
+            }
+        }
+
         header h1 {
+            min-width: 55vw;
             font-size: 6vw;
             line-height: 7vw;
-            min-width: 65vw;
         }
         header img {
-            overflow: none;
+            overflow: hidden;
+            margin-right: 0;
         }
         .main-content {
             align-items: flex-start;
@@ -305,12 +364,15 @@
         .main-content p {
             text-align: left;
         }
+        header p {
+            max-width: 18em;
+        }
     }
 
     @media (max-width: 800px) {
         header h1 {
             font-size: var(--header-large);
-            min-width: 550px;
+            min-width: 45rem;
             line-height: 5.4rem;
         }
     }
@@ -322,12 +384,8 @@
             width: 95vw;
             line-height: 12vw;
         }
-        header p {
-            max-width: 18em;
-        }
         header {
             padding: 80px 0 50px 0;
-            transition: padding 0.3s;
         }
         header img {
             display: none;
