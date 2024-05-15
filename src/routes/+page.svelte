@@ -1,9 +1,7 @@
 <script lang="ts">
     // For icons check: https://svelte-icons.vercel.app/
     import { base } from '$app/paths';
-    import FaChevronDown from 'svelte-icons/fa/FaChevronDown.svelte'
     import Button from "$lib/components/Button.svelte";
-    import Page from './about/+page.svelte';
 
     let showForm = false;
 
@@ -49,7 +47,7 @@
                     <Button handler={handleClick} text="Sign up for testing" shape="rectangle" size="medium" layout="label" color="accent" disabled={false}/>
                 </div>
                 <div>
-                    <img src={`https://raw.githubusercontent.com/Wave-Oy/wave-website/main/static/design-preview.png`} alt="Design Preview" />
+                    <img src={`${base}/design-preview.png`} alt="Design Preview" />
                 </div>
             </div>
         </header>
@@ -89,16 +87,16 @@
 
         <div class="row">
             <div class="col margin gradient-l-r">
-                <h2>Take a selfie</h2>
-                <img class="bottom-fade" src={`https://raw.githubusercontent.com/Wave-Oy/wave-website/main/static/take-selfie.png`} alt="Take a selfie" />
+                <h1>Take a selfie</h1>
+                <img class="bottom-fade" src={`${base}/take-selfie.png`} alt="Take a selfie" />
             </div>
             <div class="col margin gradient-l-r">
-                <h2>Choose a style</h2>
-                <img class="bottom-fade" src={`https://raw.githubusercontent.com/Wave-Oy/wave-website/main/static/select-style.png`} alt="Select a style" />
+                <h1>Choose a style</h1>
+                <img class="bottom-fade" src={`${base}/select-style.png`} alt="Select a style" />
             </div>
             <div class="col margin gradient-l-r">
-                <h2>Book a time</h2>
-                <img class="bottom-fade" src={`https://raw.githubusercontent.com/Wave-Oy/wave-website/main/static/book-time.png`} alt="Book a time" />
+                <h1>Book a time</h1>
+                <img class="bottom-fade" src={`${base}/book-time.png`} alt="Book a time" />
             </div>
         </div>
     </div>
@@ -183,15 +181,6 @@
         font-weight: 500;
         margin: 0;
         padding: 0;
-
-        &.section-title {
-            font-size: 4.8rem;
-            margin-top: 2rem;
-        }
-
-        &.margin-bottom {
-            margin-bottom: 2rem;
-        }
     }
 
     .gradient-l-r {
