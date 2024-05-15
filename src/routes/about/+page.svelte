@@ -57,6 +57,89 @@
                     </p>
                 </div>
             </div>
+
+            <section>
+                <div class="col box-around content" style="max-width:800px;">
+                    <h2 class="gradient-l-r center" style="margin-bottom: 25px;">Our amazing team!</h2>
+                    <div class="team-desktop">
+                        <div class="row">
+                            <div class="col center">
+                                <div class="team-picture-title">
+                                    <p class="headshot-title center margin-0" style="margin-bottom: 5px;">CEO</p>
+                                    <p class="headshot-title center margin-0">Ville Sekki</p>
+                                </div>
+                                <img src={`${base}/team-ville.png`} alt="Ville Sekki" class="team-image desktop">
+                            </div>
+                            <div class="col center">
+                                <img src={`${base}/team-johannes.png`} alt="Johannes Haapanen" class="team-image desktop">
+                                <div class="team-picture-title">
+                                    <p class="headshot-title center margin-0" style="margin-bottom: 5px;">CIO</p>
+                                    <p class="headshot-title center margin-0">Johannes Haapanen</p>
+                                </div>
+                            </div>
+                            <div class="col center">
+                                <div class="team-picture-title" style="margin-top: 50px;">
+                                    <p class="headshot-title center margin-0" style="margin-bottom: 5px;">CFO</p>
+                                    <p class="headshot-title center margin-0">Simo Osola</p>
+                                </div>
+                                <img src={`${base}/team-simo.png`} alt="Simo Osola" class="team-image desktop">
+                            </div>
+                            <div class="col center">
+                                <img src={`${base}/team-georgy.png`} alt="Georgy Pokazeev" class="team-image desktop">
+                                <div class="team-picture-title">
+                                    <p class="headshot-title center margin-0" style="margin-bottom: 5px;">CTO</p>
+                                    <p class="headshot-title center margin-0">Georgy Pokazeev</p>
+                                </div>
+                            </div>
+                            <div class="col center">
+                                <div class="team-picture-title">
+                                    <p class="headshot-title center margin-0" style="margin-bottom: 5px;">Developer & Designer</p>
+                                    <p class="headshot-title center margin-0">Tomi Koskinen</p>
+                                </div>
+                                <img src={`${base}/team-tomi.png`} alt="Tomi Koskinen" class="team-image desktop">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-mobile">
+                        <div class="col">
+                            <div class="col center">
+                                <img src={`${base}/team-ville.png`} alt="Ville Sekki" class="team-image mobile">
+                                <div class="team-picture-title">
+                                    <p class="headshot-title center margin-0" style="margin-bottom: 5px;">CEO</p>
+                                    <p class="headshot-title center margin-0">Ville Sekki</p>
+                                </div>
+                            </div>
+                            <div class="col center">
+                                <img src={`${base}/team-johannes.png`} alt="Johannes Haapanen" class="team-image mobile">
+                                <div class="team-picture-title">
+                                    <p class="headshot-title center margin-0" style="margin-bottom: 5px;">CIO</p>
+                                    <p class="headshot-title center margin-0">Johannes Haapanen</p>
+                                </div>
+                            </div>
+                            <div class="col center">
+                                <img src={`${base}/team-simo.png`} alt="Simo Osola" class="team-image mobile">
+                                <div class="team-picture-title">
+                                    <p class="headshot-title center margin-0" style="margin-bottom: 5px;">CFO</p>
+                                    <p class="headshot-title center margin-0">Simo Osola</p>
+                                </div>
+                            </div>
+                            <div class="col center">
+                                <img src={`${base}/team-georgy.png`} alt="Georgy Pokazeev" class="team-image mobile">
+                                <div class="team-picture-title">
+                                    <p class="headshot-title center margin-0" style="margin-bottom: 5px;">CTO</p>
+                                    <p class="headshot-title center margin-0">Georgy Pokazeev</p>
+                                </div>
+                            </div>
+                            <div class="col center">
+                                <img src={`${base}/team-tomi.png`} alt="Tomi Koskinen" class="team-image mobile">
+                                <div class="team-picture-title">
+                                    <p class="headshot-title center margin-0" style="margin-bottom: 5px;">Developer & Designer</p>
+                                    <p class="headshot-title center margin-0">Tomi Koskinen</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </section>
     </div>
 </div>
@@ -175,7 +258,38 @@
         border: 2px solid var(--foreground-accent);
         width: 250px;
     }
-    .headshot-container-mobile {
+    .margin-0 {
+        margin: 0;
+    }
+
+    .center {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .team-image {
+        max-width: 150px;
+        margin: auto;
+        margin-top: -25px;
+        margin-bottom: -25px;
+
+        &.desktop {
+            margin-top: -25px;
+            margin-bottom: -25px;
+        }
+
+        &.mobile {
+            margin-top: 0;
+            margin-bottom: -20px;
+        }
+    }
+
+    .team-desktop {
+            display: block;
+        }
+
+    .team-mobile {
         display: none;
     }
 
@@ -197,8 +311,23 @@
             display: none;
             /* Make appear below or above the text, idc */
         }
+        .team-desktop {
+            display: none;
+        }
+
+        .team-mobile {
+            display: block;
+        }
     }
     @media (max-width: 600px) {
+
+        .team-desktop {
+            display: none;
+        }
+
+        .team-mobile {
+            display: block;
+        }
         h1 {
             font-size: 8vw;
         }
