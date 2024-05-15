@@ -9,10 +9,10 @@
     --container-padding: 20px;
 
     /* Font size */
-    --label-small: 1.4rem;
-    --label-medium: 1.6rem;
-    --label-large: 1.8rem;
-    --label-xlarge: 2rem;
+    --label-small: 1.6rem;
+    --label-medium: 1.8rem;
+    --label-large: 2rem;
+    --label-xlarge: 2.8rem;
     --paragraph-small: 1.6rem;
     --paragraph-medium: 1.8rem;
     --paragraph-large: 2rem;

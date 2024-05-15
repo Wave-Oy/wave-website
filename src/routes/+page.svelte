@@ -12,6 +12,8 @@
     let city: string;
     let antibot: string;
 
+    let formSent = false;
+
     const handleClick = () => {
         showForm = !showForm;
     }
@@ -28,11 +30,12 @@
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
         })
-        
+
         if (res.status != 200) {
             console.error()
         }
 
+        formSent = true;
     }
 </script>
 
@@ -43,7 +46,7 @@
                 <div>
                     <h1 class="gradient-r-l">Choosing a hairstyle<br>has never been<br>easier</h1>
                     <p>Wave is transforming the way you choose and book your hairstyle with just a selfie.</p>
-                    <Button handler={handleClick} text="Sign up for testing" shape="rectangle" size="large" layout="label" color="accent" disabled={false}/>
+                    <Button handler={handleClick} text="Sign up for testing" shape="rectangle" size="medium" layout="label" color="accent" disabled={false}/>
                 </div>
                 <div>
                     <img src={`https://raw.githubusercontent.com/Wave-Oy/wave-website/main/static/design-preview.png`} alt="Design Preview" />
@@ -52,26 +55,31 @@
         </header>
 
         <section id="form-section" class="form-section {showForm ? 'visible' : ''}">
-            <h1 class="gradient-l-r">Sign up for testing</h1>
-            <form>
-                <div class="form-row">
-                    <div class="form-col">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your name" required bind:value={name}>
+            {#if !formSent}
+                <h2 class="gradient-l-r">Sign up for testing</h2>
+                <form>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required bind:value={name}>
+                        </div>
+                        <div class="form-col">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your email" required bind:value={email}>
+                        </div>
+                        <div class="form-col">
+                            <label for="city">City of Residence</label>
+                            <input type="text" id="city" name="city" placeholder="Your city" required bind:value={city}>
+                        </div>
+                        <!-- Protection from bots -->
+                        <input style="visibility: hidden; position:fixed;" bind:value={antibot}>
                     </div>
-                    <div class="form-col">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your email" required bind:value={email}>
-                    </div>
-                    <div class="form-col">
-                        <label for="city">City of Residence</label>
-                        <input type="text" id="city" name="city" placeholder="Your city" required bind:value={city}>
-                    </div>
-                    <!-- Protection from bots -->
-                    <input style="visibility: hidden; position:fixed;" bind:value={antibot}>
-                </div>
-                <Button handler={submitForm} text="Sign up" shape="rectangle" size="medium" layout="label" color="accent" disabled={false}/>
-            </form>
+                    <Button handler={submitForm} text="Sign up" shape="rectangle" size="medium" layout="label" color="accent" disabled={false}/>
+                </form>
+            {:else}
+                <h2 class="gradient-l-r">Thank you!</h2>
+                <p>We will send you an email as soon as we release our closed test version of the application.</p>
+            {/if}
         </section>
 
         <section class="main-content">
@@ -81,15 +89,15 @@
 
         <div class="row">
             <div class="col margin gradient-l-r">
-                <h1>Take a selfie</h1>
+                <h2>Take a selfie</h2>
                 <img class="bottom-fade" src={`https://raw.githubusercontent.com/Wave-Oy/wave-website/main/static/take-selfie.png`} alt="Take a selfie" />
             </div>
             <div class="col margin gradient-l-r">
-                <h1>Choose a style</h1>
+                <h2>Choose a style</h2>
                 <img class="bottom-fade" src={`https://raw.githubusercontent.com/Wave-Oy/wave-website/main/static/select-style.png`} alt="Select a style" />
             </div>
             <div class="col margin gradient-l-r">
-                <h1>Book a time</h1>
+                <h2>Book a time</h2>
                 <img class="bottom-fade" src={`https://raw.githubusercontent.com/Wave-Oy/wave-website/main/static/book-time.png`} alt="Book a time" />
             </div>
         </div>
@@ -99,6 +107,7 @@
 <style lang="scss">
     header h1 {
         font-size: var(--header-xlarge);
+        min-width: 65rem;
         line-height: 7rem;
         font-weight: 600;
         margin: 0 0 25px 0;
@@ -112,6 +121,10 @@
         margin: 0 0 50px 0;
         max-width: 500px;
         padding: 0;
+    }
+
+    header img {
+        overflow: hidden;
     }
 
     .main-content {
@@ -137,6 +150,7 @@
         margin: 0;
         padding: 0;
     }
+
 
     .parallax-content h3 {
         font-size: var(--header-small);
@@ -164,7 +178,7 @@
         }
     }
 
-    h1 {
+    h2 {
         font-size: 3.6rem;
         font-weight: 500;
         margin: 0;
@@ -233,6 +247,17 @@
             padding: 100px 0 100px 0;
         }
 
+        
+        p {
+            font-size: var(--paragraph-medium);
+            color: var(--foreground-accent);
+            text-align: center;
+            max-width: 700px;
+            font-weight: 600;
+            margin: 10px 0 0 0;
+            padding: 0;
+        }
+
         form {
             display: flex;
             flex-direction: column;
@@ -253,7 +278,7 @@
                     justify-content: left;
 
                     label {
-                        font-size: var(--label-medium);
+                        font-size: var(--label-small);
                         color: var(--foreground-accent);
                         font-weight: 600;
                         padding: 0;
@@ -271,6 +296,55 @@
                     }
                 }
             }
+        }
+    }
+
+    @media (max-width: 1000px) {
+        header h1 {
+            font-size: 6vw;
+            line-height: 7vw;
+            min-width: 65vw;
+        }
+        header img {
+            overflow: none;
+        }
+        .main-content {
+            align-items: flex-start;
+        }
+        .main-content h2 {
+        }
+        .main-content p {
+            text-align: left;
+        }
+    }
+
+    @media (max-width: 800px) {
+        header h1 {
+            font-size: var(--header-large);
+            min-width: 550px;
+            line-height: 5.4rem;
+        }
+    }
+
+    @media (max-width: 600px) {
+        header h1 {
+            font-size: 10vw;
+            min-width: 0;
+            width: 95vw;
+            line-height: 12vw;
+        }
+        header p {
+            max-width: 18em;
+        }
+        header {
+            padding: 80px 0 50px 0;
+            transition: padding 0.3s;
+        }
+        header img {
+            display: none;
+        }
+        .main-content h2 {
+            font-size: var(--header-medium);
         }
     }
 </style>
