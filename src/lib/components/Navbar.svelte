@@ -40,10 +40,16 @@
         <!-- Pages -->
         <ul>
             <li>
+                <a href="{base}/" class:active-route={currentRoute==""}>Home</a>
+            </li>
+            <li>
                 <a href="{base}/about" class:active-route={currentRoute=="about"}>About</a>
             </li>
             <li>
-                <a href="{base}/contact" class:active-route={currentRoute=="contact"}>Contact</a>
+                <a href="{base}/forbusinesses" class:active-route={currentRoute=="forbusinesses"}>For Businesses</a>
+            </li>
+            <li>
+                <a href="{base}/contact" class:active-route={currentRoute=="contact"}>Contact Us</a>
             </li>
         </ul>
     </div>

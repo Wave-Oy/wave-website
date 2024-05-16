@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let handler: () => void;
+    export let handler: () => void = () => {};
     export let shape: string = "rectangle";
     export let size: string = "medium";
     export let layout: string = "label";
