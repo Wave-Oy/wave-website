@@ -46,10 +46,10 @@
                 <a href="{base}/about" class:active-route={currentRoute=="about"}>About</a>
             </li>
             <li>
-                <a href="{base}/forbusinesses" class:active-route={currentRoute=="forbusinesses"}>For Businesses</a>
+                <a href="{base}/forbusinesses" class:active-route={currentRoute=="forbusinesses"}>For businesses</a>
             </li>
             <li>
-                <a href="{base}/contact" class:active-route={currentRoute=="contact"}>Contact Us</a>
+                <a href="{base}/contact" class:active-route={currentRoute=="contact"}>Contact us</a>
             </li>
         </ul>
     </div>

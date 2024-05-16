@@ -84,8 +84,8 @@
         </section>
 
         <section class="main-content">
-            <h2 class="gradient-r-l">An interactive reservation system</h2>
-            <p>Wave offers a reservation system equipped with a personal hairstyle assistant, to help people choose haircuts based on real data and communicate it to salons.</p>
+            <h2 class="gradient-r-l">Ready to go solution for businesses</h2>
+            <p>Wave offers a personal hairstyle assistant, to help your customers choose the best haircut for them based on real data and gives your employees a clear idea what kind of haircuts your customers actually want.</p>
         </section>
 
         <section class="parallax-content">
@@ -154,7 +154,7 @@
     }
     .main-content h2 {
         font-size: var(--header-large);
-        line-height: 4.6rem;
+        line-height: 8rem;
         font-weight: 600;
         margin: 0 0 25px 0;
         padding: 0;
@@ -412,6 +412,7 @@
         }
         .main-content h2 {
             font-size: var(--header-medium);
+            line-height: 5rem;
         }
     }
 </style>
