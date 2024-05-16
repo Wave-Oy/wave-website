@@ -43,7 +43,7 @@
                 <a href="{base}/about" class:active-route={currentRoute=="about"}>About</a>
             </li>
             <li>
-                <a href="{base}/" class:active-route={currentRoute=="contact"}>Contact</a>
+                <a href="{base}/contact" class:active-route={currentRoute=="contact"}>Contact</a>
             </li>
         </ul>
     </div>

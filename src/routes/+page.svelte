@@ -144,6 +144,7 @@
     }
     .main-content h2 {
         font-size: var(--header-large);
+        line-height: 4.6rem;
         font-weight: 600;
         margin: 0 0 25px 0;
         padding: 0;
