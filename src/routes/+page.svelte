@@ -20,6 +20,9 @@
         if (antibot) {
             return;
         }
+        if (!name || !email || !city) {
+            return;
+        }
         const google_form_url = `https://docs.google.com/forms/d/e/1FAIpQLSdeTWpcZgsTbNXSqczGqfwS6zqyYCdgI375_J6z6Rmt1YxPBw/formResponse?&submit=Submit?usp=pp_url&entry.111887972=${name}&entry.1362910400=${email}&entry.533110689=${city}`
         const res = await fetch(google_form_url, {
             method: 'GET',
@@ -99,6 +102,13 @@
                 <img src={`${base}/book-time.png`} alt="Book a time" />
             </div>
         </section>
+
+        <section class="main-content">
+            <div class="col box-around content" style="max-width:800px;">
+                <h2 class="gradient-l-r center question" style="padding: 2rem;">Got a question?</h2>
+                <a href={`${base}/contact`} style="margin-bottom: 1rem;"><Button text="Contact us" shape="rectangle" size="medium" layout="label" color="accent" disabled={false}/></a>
+            </div>
+        </section>
     </div>
 </div>
 
@@ -164,7 +174,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin: 50px 0 100px 0;
+        // margin: 50px 0 100px 0;
     }
     .parallax-item {
     }
@@ -181,6 +191,7 @@
         height: auto;
         padding: 0 50px 0 50px;
     }
+
     @media (max-width: 1000px) {
         .parallax-item img {
             width: 200px;
@@ -257,6 +268,14 @@
         color: rgba(0,0,0,0);
 
         color: var(--blue-700);
+    }
+
+    .box-around {
+        justify-content: center;
+        align-items: center;
+        background-color: var(--blue-100);
+        padding: 20px 40px 20px 40px;
+        border-radius: 20px;
     }
 
     .form-section {
