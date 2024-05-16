@@ -18,7 +18,7 @@
 
         <div class="col main-section">
             <div class="row">
-                <div class="col box-around first-box" style="margin-top: 0;">
+                <div class="col box-around first-box">
                     <h2 class="gradient-l-r">Know what your customers want</h2>
                     <p>Wave gives you a clear idea what kind of a haircut your customers want. Waves personal hairstyle asssitant matches your customers with the most fitting hairstyles possible. With wave, you will never have a situation where the customer wants somethingh impossible.</p>
                 </div>
@@ -33,7 +33,7 @@
             </div>
 
             <div class="row">
-                <div class="col" style="margin-bottom: 100px;">
+                <div class="col">
                     <img src={`${base}/about-decorations.png`} alt="decorations" class="decorations">
                 </div>
                 <div class="col box-around third-box">
@@ -41,6 +41,13 @@
                     <p>Wave is shortly going to be available as an easy to integrate solution for all kinds of businesses! Contact us to hear more about our solutions and to discuss about integration and testing.</p>
                 </div>
             </div>
+
+            <section class="main-content" style="margin-bottom: 50px;">
+                <div class="col box-around content main-section" style="max-width:800px;">
+                    <h2 class="gradient-l-r center question" style="padding: 2rem; text-align: center;">Interested? We are testing.</h2>
+                    <a href={`${base}/contact`} style="margin-bottom: 1rem;"><Button text="Contact us" shape="rectangle" size="medium" layout="label" color="accent" disabled={false}/></a>
+                </div>
+            </section>
         </div>
     </div>
 </div>
@@ -117,7 +124,6 @@
 
             @media (max-width: 600px) {
                 margin-top: 50px;
-                margin-bottom: 50px;
             }
         }
     }
