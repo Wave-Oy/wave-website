@@ -405,7 +405,7 @@
             line-height: 12vw;
         }
         header {
-            padding: 80px 0 50px 0;
+            padding: 40px 0 50px 0;
         }
         header img {
             display: none;
