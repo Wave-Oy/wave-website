@@ -11,6 +11,7 @@
             </div>
         </div>
         <div class="contact">
+            <p class="footer-text">Contact us:</p>
             <a href='mailto:contact@waveapp.fi'>contact@waveapp.fi</a>
         </div>
     </div>
@@ -24,7 +25,7 @@
         margin: 0;
         padding: 20px 0 20px 0;
         background: none;
-        background-color: var(--background-tertiary);
+        background-color: var(--background-accent);
         backdrop-filter: blur(100px);
     }
 
@@ -38,7 +39,7 @@
         text-decoration: none;
         font-weight: 500;
         color: var(--foreground-on-accent);
-        font-size: 2.6rem;
+        font-size: 3.6rem;
         letter-spacing: -0.05em;
     }
 
@@ -68,6 +69,13 @@
 
     .contact a {
         text-decoration: none;
+        color: var(--foreground-on-accent);
+        font-size: var(--label-small);
+    }
+
+    .footer-text {
+        padding: 0 0 0 0;
+        margin: 0 0 10px 0;
         color: var(--foreground-on-accent);
         font-size: var(--label-small);
     }
