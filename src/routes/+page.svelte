@@ -105,7 +105,7 @@
 
         <section class="main-content">
             <div class="col box-around content" style="max-width:800px;">
-                <h2 class="gradient-l-r center question" style="padding: 2rem;">Got a question?</h2>
+                <h2 class="gradient-l-r center question" style="padding: 2rem; text-align:center;">Got a question?</h2>
                 <a href={`${base}/contact`} style="margin-bottom: 1rem;"><Button text="Contact us" shape="rectangle" size="medium" layout="label" color="accent" disabled={false}/></a>
             </div>
         </section>
