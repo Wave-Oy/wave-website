@@ -3,7 +3,7 @@
         <section>
             <h1 class="gradient-r-l">Contact</h1>
             <p>Contact us, whether you’re looking to enroll in our testing program for salons or have general inquiries about our solutions. We look forward to connecting with you!</p>
-            <p>Email: <a href="mailto:contact@waveapp.fi">contact(at)waveapp.fi</a> or firstname(at)waveapp.fi</p>
+            <p>Email: <a href="mailto:contact@bytetyde.com">contact(at)bytetyde.com</a> or firstname(at)bytetyde.com</p>
         </section>
     </div>
 </div>

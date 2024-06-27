@@ -12,7 +12,7 @@
         </div>
         <div class="contact">
             <p class="footer-text">Contact us:</p>
-            <a href='mailto:contact@waveapp.fi'>contact(at)waveapp.fi</a>
+            <a href='mailto:contact@bytetyde.com'>contact(at)bytetyde.com</a>
         </div>
     </div>
 </footer>
